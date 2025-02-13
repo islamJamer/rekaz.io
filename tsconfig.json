@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "lib": [
+            "es5",
+            "dom"
+        ],
+        "types": [
+            "cypress",
+            "@testing-library/cypress",
+            "node",
+            "@badeball/cypress-cucumber-preprocessor"
+        ],
+        // "baseUrl": "../node_modules",
+        "esModuleInterop": true
+    },
+    "include": [ "cypress.config.ts", "**/*.ts"]
+}
