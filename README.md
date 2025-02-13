@@ -70,4 +70,5 @@ Cypress supports multiple types of tests: API, Unit, and E2E. Use the appropriat
 ├── package.json              # Project dependencies & scripts
 ├── README.md                 # Setup and usage instructions
 ├── tsconfig.json             # TypeScript configuration
+├── Bugs.docx                 # Bugs that I've found while checking the webapp
 ```
