@@ -20,5 +20,9 @@ export const getHeaderSelectors = () => {
             .filter(Boolean)
         );
     },
+
+    get loginButton() {
+      return getNavbar().contains("a", "دخول");
+    }
   };
 };

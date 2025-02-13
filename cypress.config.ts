@@ -56,8 +56,8 @@ export const setupNodeEvents = defineConfig({
       };
 
       on('file:preprocessor', cucumber(options));
-      if(config.env.testType === 'api') getApiTestsConfig() as Cypress.PluginConfigOptions;
-      if(config.env.testType === 'e2e') getE2ETestsConfig() as Cypress.PluginConfigOptions;
+      if(config.env.testType === 'api') return getApiTestsConfig() as Cypress.PluginConfigOptions;
+      if(config.env.testType === 'e2e') return getE2ETestsConfig() as Cypress.PluginConfigOptions;
       return devConfig as Cypress.PluginConfigOptions;;
     },
   },

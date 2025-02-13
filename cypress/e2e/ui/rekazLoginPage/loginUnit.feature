@@ -1,4 +1,4 @@
-Feature: "Rekaz.io" webapp - login page scenarios
+Feature: "Rekaz.io" webapp - login page Unit tests
 
     Background:
         Given I visit the "Rekaz.io" login page
