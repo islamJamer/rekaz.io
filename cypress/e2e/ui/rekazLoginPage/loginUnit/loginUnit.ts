@@ -1,9 +1,26 @@
-import { Given, Then } from "cypress-cucumber-preprocessor/steps";
+import { When, Then } from "cypress-cucumber-preprocessor/steps";
+import { getLoginPageSelectors } from "../../../selectors/loginPageSelectors";
 
-Given('I visit the "To Do" home page', () => {
-    cy.visit('/')
+const loginPage = getLoginPageSelectors();
+
+Then('The "username" input field exists in the "login" page', () => {
+    loginPage.userNameInputField.should("exist");
 });
 
-Then('Page logo exist', () => {
-    cy.log('asdasd')
+Then('The "password" input field exists in the "login" page', () => {
+    loginPage.passwordInputField.should("exist");
 });
+
+Then('The "Login" button exists in the "login" page', () => {
+    loginPage.loginButton.should("exist");
+});
+
+When('I click on the "Login" button', () => {
+    loginPage.loginButton.click();
+});
+
+Then('The error message appears under both input fields', () => {
+    loginPage.userNameInputFieldErrorMessage.should("contain", "الحقل اسم المستخدم أو البريد الإلكتروني إجباري");
+    loginPage.passwordInputFieldErrorMessage.should("contain", "الحقل كلمة المرور إجباري");
+});
+

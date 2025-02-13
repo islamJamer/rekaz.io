@@ -3,13 +3,22 @@ export const getLoginPageSelectors = () => {
   return {
     url: "https://platform.rekaz.io/Account/Login",
 
-    get userName() {
+    get userNameInputField() {
       return getLoginForm().find("#LoginInput_UserNameOrEmailAddress");
     },
 
-    get password() {
+    get userNameInputFieldErrorMessage() {
+      return getLoginForm().find("#LoginInput_UserNameOrEmailAddress-error");
+    },
+
+    get passwordInputField() {
       return getLoginForm().find("#LoginInput_Password");
     },
+
+    get passwordInputFieldErrorMessage() {
+      return getLoginForm().find("#LoginInput_Password-error");
+    },
+
 
     get loginButton() {
       return getLoginForm().find('[value="Login"]');
